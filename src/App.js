@@ -20,7 +20,14 @@ function App() {
     </Card.Body>
   </Card>
   ))}
-    </div>
+Player.defaultProps = {
+     name: "Pedri",
+        age: 21,
+        nationality:'spanish',
+        team:'barcelone',
+        img:"https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt60e0570929574910/64149e8572da236419c696f2/335071325_930879951248406_2296145525242076249_n.jpg"
+};
+          </div>
     </>
   );
 }
