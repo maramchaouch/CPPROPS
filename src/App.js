@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-
+import player from './Profile';
+import {Card} from 'react-bootstrap';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+   <h1 className='App'>Football players</h1>
+   <div className="App">
+     
+     {player.map((player) =>(<Card style={{ width: '18rem', margin: '10px',height: '600px',padding: '10px',border: '2px solid black', borderRadius: '10px' }}>
+    <Card.Img variant="top" src={player.img} alt={player.name} />
+    <Card.Body>
+      <Card.Title className='text'> {player.name}</Card.Title>
+      <Card.Text className='text'>
+        Team: {player.team}<br />
+        Nationality: {player.nationality}<br />
+        Age: {player.age}
+      </Card.Text>
+    </Card.Body>
+  </Card>
+  ))}
     </div>
+    </>
   );
 }
 
